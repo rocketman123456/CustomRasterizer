@@ -1,0 +1,31 @@
+{
+    tool_target_CustomRasterizer_macosx_x86_64_cxx = {
+        toolchain_info = {
+            arch = "x86_64",
+            plat = "macosx",
+            name = "xcode",
+            cachekey = "xcode_arch_x86_64_plat_macosx"
+        },
+        toolname = "clang",
+        program = "/usr/bin/xcrun -sdk macosx clang"
+    },
+    xcode_arch_x86_64_plat_macosx = {
+        xcode = "/Applications/Xcode.app",
+        xcode_sdkver = "12.3",
+        xcode_sysroot = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        arch = "x86_64",
+        plat = "macosx",
+        __global = true,
+        target_minver = "12.4"
+    },
+    tool_target_CustomRasterizer_macosx_x86_64_ld = {
+        toolchain_info = {
+            arch = "x86_64",
+            plat = "macosx",
+            name = "xcode",
+            cachekey = "xcode_arch_x86_64_plat_macosx"
+        },
+        toolname = "clangxx",
+        program = "/usr/bin/xcrun -sdk macosx clang++"
+    }
+}

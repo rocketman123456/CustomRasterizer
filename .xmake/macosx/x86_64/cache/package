@@ -1,0 +1,283 @@
+{
+    glfw = {
+        static = true,
+        links = "glfw3",
+        version = "3.3.4",
+        __extrainfo = {
+            configs = {
+                shared = false,
+                cxflags = "-fPIC",
+                debug = true
+            },
+            glfw_include = "none",
+            system = false
+        },
+        __installdir = "/Users/developer/.xmake/packages/g/glfw/3.3.4/47b8cae4ccf8484e8aff5bc1ddecf669",
+        license = "zlib",
+        envs = {
+            LD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/g/glfw/3.3.4/47b8cae4ccf8484e8aff5bc1ddecf669/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib",
+                "/Users/developer/.xmake/packages/o/opengl/latest/b2de373ce88a4eaa806b6a0791ec3be6/lib"
+            },
+            PATH = {
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/bin"
+            },
+            DYLD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/g/glfw/3.3.4/47b8cae4ccf8484e8aff5bc1ddecf669/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib",
+                "/Users/developer/.xmake/packages/o/opengl/latest/b2de373ce88a4eaa806b6a0791ec3be6/lib"
+            }
+        },
+        __requirestr = "glfw 3.3.4",
+        sysincludedirs = "/Users/developer/.xmake/packages/g/glfw/3.3.4/47b8cae4ccf8484e8aff5bc1ddecf669/include",
+        libfiles = "/Users/developer/.xmake/packages/g/glfw/3.3.4/47b8cae4ccf8484e8aff5bc1ddecf669/lib/libglfw3.a",
+        defines = {
+            "GLFW_INCLUDE_NONE",
+            "GL_SILENCE_DEPRECATION"
+        },
+        __enabled = true,
+        frameworks = {
+            "Cocoa",
+            "IOKit",
+            "OpenGL"
+        },
+        linkdirs = "/Users/developer/.xmake/packages/g/glfw/3.3.4/47b8cae4ccf8484e8aff5bc1ddecf669/lib"
+    },
+    glad = {
+        static = true,
+        links = "glad",
+        __installdir = "/Users/developer/.xmake/packages/g/glad/v0.1.34/af599fa99ecf4ffcac5da8895f311bfc",
+        sysincludedirs = "/Users/developer/.xmake/packages/g/glad/v0.1.34/af599fa99ecf4ffcac5da8895f311bfc/include",
+        version = "v0.1.34",
+        __requirestr = "glad v0.1.34",
+        __extrainfo = {
+            configs = {
+                shared = false,
+                cxflags = "-fPIC",
+                debug = true
+            },
+            system = false
+        },
+        libfiles = "/Users/developer/.xmake/packages/g/glad/v0.1.34/af599fa99ecf4ffcac5da8895f311bfc/lib/libglad.a",
+        envs = {
+            PYTHONPATH = {
+                "/Users/developer/.xmake/packages/p/python/3.9.13/59e2dc829bd34a8a9155b3dfb6b76d08/lib/python3.9/site-packages"
+            },
+            DYLD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/g/glad/v0.1.34/af599fa99ecf4ffcac5da8895f311bfc/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib",
+                "/Users/developer/.xmake/packages/o/openssl/1.1.1o/242fb85ca139439cb037224ac333b3c0/lib",
+                "/Users/developer/.xmake/packages/c/ca-certificates/20220604/eab66b1b31d44718aadef11568e3aaba/lib",
+                "/Users/developer/.xmake/packages/p/python/3.9.13/59e2dc829bd34a8a9155b3dfb6b76d08/lib"
+            },
+            PATH = {
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/bin",
+                "/Users/developer/.xmake/packages/p/python/3.9.13/59e2dc829bd34a8a9155b3dfb6b76d08/bin",
+                "/Users/developer/.xmake/packages/p/python/3.9.13/59e2dc829bd34a8a9155b3dfb6b76d08/bin",
+                "/Users/developer/.xmake/packages/p/python/3.9.13/59e2dc829bd34a8a9155b3dfb6b76d08/Scripts"
+            },
+            SSL_CERT_FILE = {
+                "/Users/developer/.xmake/packages/c/ca-certificates/20220604/eab66b1b31d44718aadef11568e3aaba/cacert.pem"
+            },
+            SSL_CERT_DIR = {
+                "/Users/developer/.xmake/packages/c/ca-certificates/20220604/eab66b1b31d44718aadef11568e3aaba"
+            },
+            LD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/g/glad/v0.1.34/af599fa99ecf4ffcac5da8895f311bfc/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib",
+                "/Users/developer/.xmake/packages/o/openssl/1.1.1o/242fb85ca139439cb037224ac333b3c0/lib",
+                "/Users/developer/.xmake/packages/c/ca-certificates/20220604/eab66b1b31d44718aadef11568e3aaba/lib",
+                "/Users/developer/.xmake/packages/p/python/3.9.13/59e2dc829bd34a8a9155b3dfb6b76d08/lib"
+            }
+        },
+        __enabled = true,
+        license = "MIT",
+        linkdirs = "/Users/developer/.xmake/packages/g/glad/v0.1.34/af599fa99ecf4ffcac5da8895f311bfc/lib"
+    },
+    tinygltf = {
+        version = "v2.5.0",
+        __requirestr = "tinygltf v2.5.0",
+        __installdir = "/Users/developer/.xmake/packages/t/tinygltf/v2.5.0/600d19d564cd49d1b0b5b38d903b224d",
+        envs = {
+            LD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/t/tinygltf/v2.5.0/600d19d564cd49d1b0b5b38d903b224d/lib",
+                "/Users/developer/.xmake/packages/s/stb/2021.09.10/88c8b7d5f192477b8e00b7c2917ece1f/lib",
+                "/Users/developer/.xmake/packages/n/nlohmann_json/v3.10.5/5e1f1844408745b1a99fc01ec8ca7774/lib"
+            },
+            DYLD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/t/tinygltf/v2.5.0/600d19d564cd49d1b0b5b38d903b224d/lib",
+                "/Users/developer/.xmake/packages/s/stb/2021.09.10/88c8b7d5f192477b8e00b7c2917ece1f/lib",
+                "/Users/developer/.xmake/packages/n/nlohmann_json/v3.10.5/5e1f1844408745b1a99fc01ec8ca7774/lib"
+            }
+        },
+        sysincludedirs = {
+            "/Users/developer/.xmake/packages/t/tinygltf/v2.5.0/600d19d564cd49d1b0b5b38d903b224d/include",
+            "/Users/developer/.xmake/packages/s/stb/2021.09.10/88c8b7d5f192477b8e00b7c2917ece1f/include",
+            "/Users/developer/.xmake/packages/n/nlohmann_json/v3.10.5/5e1f1844408745b1a99fc01ec8ca7774/include"
+        },
+        __enabled = true,
+        __extrainfo = {
+            configs = {
+                shared = false,
+                cxflags = "-fPIC",
+                debug = true
+            },
+            system = false
+        },
+        license = "MIT"
+    },
+    spdlog = {
+        links = "fmt",
+        __installdir = "/Users/developer/.xmake/packages/s/spdlog/v1.9.0/f701688cd05344e2a8700e5a2ba2bf3c",
+        defines = "SPDLOG_FMT_EXTERNAL",
+        __requirestr = "spdlog v1.9.0",
+        linkdirs = "/usr/local/Cellar/fmt/8.1.1_1/lib",
+        __enabled = true,
+        sysincludedirs = {
+            "/Users/developer/.xmake/packages/s/spdlog/v1.9.0/f701688cd05344e2a8700e5a2ba2bf3c/include",
+            "/usr/local/Cellar/fmt/8.1.1_1/include"
+        },
+        envs = {
+            LD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/s/spdlog/v1.9.0/f701688cd05344e2a8700e5a2ba2bf3c/lib",
+                "/Users/developer/.xmake/packages/f/fmt/8.1.1/a76bb50632c3414287a7b25b9bb2eac0/lib"
+            },
+            DYLD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/s/spdlog/v1.9.0/f701688cd05344e2a8700e5a2ba2bf3c/lib",
+                "/Users/developer/.xmake/packages/f/fmt/8.1.1/a76bb50632c3414287a7b25b9bb2eac0/lib"
+            }
+        },
+        __extrainfo = {
+            configs = {
+                shared = false,
+                cxflags = "-fPIC",
+                debug = true,
+                fmt_external = true
+            },
+            system = false
+        },
+        version = "v1.9.0"
+    },
+    eigen = {
+        version = "3.4.0",
+        __requirestr = "eigen 3.4.0",
+        __installdir = "/Users/developer/.xmake/packages/e/eigen/3.4.0/18b2d20969594628b5cc74c959bc8743",
+        envs = {
+            LD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/e/eigen/3.4.0/18b2d20969594628b5cc74c959bc8743/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib"
+            },
+            PATH = {
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/bin"
+            },
+            DYLD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/e/eigen/3.4.0/18b2d20969594628b5cc74c959bc8743/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib"
+            }
+        },
+        sysincludedirs = {
+            "/Users/developer/.xmake/packages/e/eigen/3.4.0/18b2d20969594628b5cc74c959bc8743/include",
+            "/Users/developer/.xmake/packages/e/eigen/3.4.0/18b2d20969594628b5cc74c959bc8743/include/eigen3"
+        },
+        __enabled = true,
+        __extrainfo = {
+            configs = {
+                shared = false,
+                cxflags = "-fPIC",
+                debug = true
+            },
+            system = false
+        },
+        license = "MPL-2.0"
+    },
+    fmt = {
+        static = true,
+        links = "fmtd",
+        __installdir = "/Users/developer/.xmake/packages/f/fmt/8.0.1/0e56294aa50b467895f6f0fd96d10026",
+        sysincludedirs = "/Users/developer/.xmake/packages/f/fmt/8.0.1/0e56294aa50b467895f6f0fd96d10026/include",
+        __requirestr = "fmt 8.0.1",
+        linkdirs = "/Users/developer/.xmake/packages/f/fmt/8.0.1/0e56294aa50b467895f6f0fd96d10026/lib",
+        libfiles = "/Users/developer/.xmake/packages/f/fmt/8.0.1/0e56294aa50b467895f6f0fd96d10026/lib/libfmtd.a",
+        __extrainfo = {
+            configs = {
+                shared = false,
+                cxflags = "-fPIC",
+                debug = true
+            },
+            system = false
+        },
+        __enabled = true,
+        envs = {
+            LD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/f/fmt/8.0.1/0e56294aa50b467895f6f0fd96d10026/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib"
+            },
+            PATH = {
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/bin"
+            },
+            DYLD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/f/fmt/8.0.1/0e56294aa50b467895f6f0fd96d10026/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib"
+            }
+        },
+        version = "8.0.1"
+    },
+    ["yaml-cpp"] = {
+        static = true,
+        links = "yaml-cpp",
+        __installdir = "/Users/developer/.xmake/packages/y/yaml-cpp/0.7.0/14a40157c44546eba5cab18264a91572",
+        sysincludedirs = "/Users/developer/.xmake/packages/y/yaml-cpp/0.7.0/14a40157c44546eba5cab18264a91572/include",
+        version = "0.7.0",
+        __requirestr = "yaml-cpp 0.7.0",
+        __extrainfo = {
+            configs = {
+                shared = false,
+                cxflags = "-fPIC",
+                debug = true
+            },
+            system = false
+        },
+        libfiles = "/Users/developer/.xmake/packages/y/yaml-cpp/0.7.0/14a40157c44546eba5cab18264a91572/lib/libyaml-cpp.a",
+        envs = {
+            DYLD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/y/yaml-cpp/0.7.0/14a40157c44546eba5cab18264a91572/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib"
+            },
+            PATH = {
+                "/Users/developer/.xmake/packages/y/yaml-cpp/0.7.0/14a40157c44546eba5cab18264a91572/bin",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/bin"
+            },
+            LD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/y/yaml-cpp/0.7.0/14a40157c44546eba5cab18264a91572/lib",
+                "/Users/developer/.xmake/packages/c/cmake/3.22.1/ce088a81a9294bd390c7559ab0645089/lib"
+            }
+        },
+        __enabled = true,
+        license = "MIT",
+        linkdirs = "/Users/developer/.xmake/packages/y/yaml-cpp/0.7.0/14a40157c44546eba5cab18264a91572/lib"
+    },
+    stb = {
+        __requirestr = "stb",
+        version = "2021.09.10",
+        __installdir = "/Users/developer/.xmake/packages/s/stb/2021.09.10/d676aed4e97e4de2a0444fd2926c6b44",
+        envs = {
+            LD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/s/stb/2021.09.10/d676aed4e97e4de2a0444fd2926c6b44/lib"
+            },
+            DYLD_LIBRARY_PATH = {
+                "/Users/developer/.xmake/packages/s/stb/2021.09.10/d676aed4e97e4de2a0444fd2926c6b44/lib"
+            }
+        },
+        __enabled = true,
+        __extrainfo = {
+            configs = {
+                shared = false,
+                cxflags = "-fPIC",
+                debug = true
+            },
+            system = false
+        },
+        sysincludedirs = "/Users/developer/.xmake/packages/s/stb/2021.09.10/d676aed4e97e4de2a0444fd2926c6b44/include"
+    }
+}
