@@ -21,6 +21,7 @@ target("CustomRasterizer")
         "Geometry/*.cpp",
         "Log/*.cpp",
         "Math/*.cpp",
+        "Parser/*.cpp",
         "Platform/*.cpp",
         "Rasterizer/*.cpp",
         "Utils/*.cpp"

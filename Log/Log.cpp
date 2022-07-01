@@ -16,7 +16,7 @@ IMPLEMENT_LOG_CHANNEL(Core);
 IMPLEMENT_LOG_CHANNEL(Window);
 IMPLEMENT_LOG_CHANNEL(Render);
 // IMPLEMENT_LOG_CHANNEL(Event);
-// IMPLEMENT_LOG_CHANNEL(File);
+IMPLEMENT_LOG_CHANNEL(File);
 // IMPLEMENT_LOG_CHANNEL(Audio);
 // IMPLEMENT_LOG_CHANNEL(App);
 #endif
@@ -44,7 +44,7 @@ namespace Rocket {
         INIT_LOG_CHANNEL(Window);
         INIT_LOG_CHANNEL(Render);
         // INIT_LOG_CHANNEL(Event);
-        // INIT_LOG_CHANNEL(File);
+        INIT_LOG_CHANNEL(File);
         // INIT_LOG_CHANNEL(Audio);
         // INIT_LOG_CHANNEL(App);
     }
@@ -54,7 +54,7 @@ namespace Rocket {
         END_LOG_CHANNEL(Window);
         END_LOG_CHANNEL(Render);
         // END_LOG_CHANNEL(Event);
-        // END_LOG_CHANNEL(File);
+        END_LOG_CHANNEL(File);
         // END_LOG_CHANNEL(Audio);
         // END_LOG_CHANNEL(App);
     }
