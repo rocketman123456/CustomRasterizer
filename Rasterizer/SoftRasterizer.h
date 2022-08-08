@@ -57,6 +57,11 @@ namespace Rocket {
         inline auto GetFragmentShader() { return fragment_shader_; }
         inline void SetTexture(SoftTexturePtr tex) { texture_ = tex; }
         inline auto GetTexture() { return texture_; }
+        inline void SetClearColor(const Eigen::Vector3f& color) { clear_color_ = color; }
+        inline bool IsCurrentFinish() const { return has_finish_[current_frame_]; }
+        inline bool IsLastFinish() const { return has_finish_[last_frame_]; }
+        inline void SetCurrentFinish(bool finish) { has_finish_[current_frame_] = finish; }
+        inline void SetLastFinish(bool finish) { has_finish_[last_frame_] = finish; }
 
         inline std::vector<Eigen::Vector3f>& FrameBufferNext() { return frame_buf_[current_frame_]; }
         inline std::vector<float>& DepthBufferNext() { return depth_buf_[current_frame_]; } 
@@ -65,7 +70,8 @@ namespace Rocket {
 
         inline void NextFrame() { last_frame_ = current_frame_++; current_frame_ = current_frame_%FRAME_COUNT; }
 
-        void SetPixel(const Eigen::Vector2i& point, const Eigen::Vector3f& color);
+        void SetDepth(const Eigen::Vector2f& point, float depth);
+        void SetPixel(const Eigen::Vector2f& point, const Eigen::Vector3f& color);
 
         void Clear(BufferType buff);
         void ClearAll(BufferType buff);
@@ -101,17 +107,22 @@ namespace Rocket {
         void RasterizeTriangle(const SoftTriangle& t, const std::array<Eigen::Vector3f, 3>& view_pos = {});
 
         Eigen::Vector3f CalculateColor(
-            const SoftTriangle& t, int x, int y, float& minDepth, 
+            const SoftTriangle& t, int x, int y,
+            const Eigen::Vector2f& pos, 
+            const std::array<Eigen::Vector4f, 3>& v);
+        float CalculateDepth(
+            const SoftTriangle& t, int x, int y, 
+            const float minDepth,
             const Eigen::Vector2f& pos, 
             const std::array<Eigen::Vector4f, 3>& v);
         Eigen::Vector3f CalculateColorWithShader(
-            const SoftTriangle& t, int x, int y, float& minDepth, 
+            const SoftTriangle& t, int x, int y,
             const Eigen::Vector2f& pos, 
             const std::array<Eigen::Vector4f, 3>& v, 
             const std::array<Eigen::Vector3f, 3>& view_pos);
 
         inline int32_t GetNextId() { return next_id_++; }
-        inline int32_t GetIndex(int32_t x, int32_t y) { return (height_-y)*width_ + x; }
+        inline int32_t GetIndex(int32_t x, int32_t y) { return (height_ - 1 - y) * width_ + x; }
         float FindDepth(int32_t x, int32_t y);
 
     private:
@@ -131,15 +142,16 @@ namespace Rocket {
         int32_t current_frame_ = 0;
         int32_t last_frame_ = 0;
         // For Multi-Thread Get Framebuffer
-        std::atomic<bool> has_finish_[FRAME_COUNT] = { false };
 
         std::optional<SoftTexturePtr> texture_;
 
-        FragmentShaderFunc fragment_shader_;
         VertexShaderFunc vertex_shader_;
+        FragmentShaderFunc fragment_shader_;
 
+        Eigen::Vector3f clear_color_ = Eigen::Vector3f::Zero();
         std::vector<Eigen::Vector3f> frame_buf_[FRAME_COUNT];
         std::vector<float> depth_buf_[FRAME_COUNT];
+        bool has_finish_[FRAME_COUNT] = { false };
 
         int32_t width_ = 0;
         int32_t height_ = 0;

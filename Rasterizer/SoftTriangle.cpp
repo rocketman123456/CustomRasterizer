@@ -16,12 +16,18 @@ namespace Rocket {
     }
 
     SoftTriangle::SoftTriangle(Geometry::TrianglePtr tri) {
-        auto tri_pos0 = tri->vertices[0]->position;
-        auto tri_pos1 = tri->vertices[1]->position;
-        auto tri_pos2 = tri->vertices[2]->position;
-        v[0] = Eigen::Vector4f(tri_pos0[0], tri_pos0[1], tri_pos0[2], 1.0f);
-        v[1] = Eigen::Vector4f(tri_pos1[0], tri_pos1[1], tri_pos1[2], 1.0f);
-        v[2] = Eigen::Vector4f(tri_pos2[0], tri_pos2[1], tri_pos2[2], 1.0f);
+        Eigen::Vector3d tri_pos0 = tri->vertices[0]->position;
+        Eigen::Vector3d tri_pos1 = tri->vertices[1]->position;
+        Eigen::Vector3d tri_pos2 = tri->vertices[2]->position;
+
+        v[0] << tri_pos0[0], tri_pos0[1], tri_pos0[2], 1.0f;
+        v[1] << tri_pos1[0], tri_pos1[1], tri_pos1[2], 1.0f;
+        v[2] << tri_pos2[0], tri_pos2[1], tri_pos2[2], 1.0f;
+
+        Eigen::Vector3d cc_normal = (tri_pos1 - tri_pos0).cross(tri_pos2 - tri_pos1);
+        normal[0] << cc_normal[0], cc_normal[1], cc_normal[2];
+        normal[1] << cc_normal[0], cc_normal[1], cc_normal[2];
+        normal[2] << cc_normal[0], cc_normal[1], cc_normal[2];
 
         color[0] << 0.0, 0.0, 0.0;
         color[1] << 0.0, 0.0, 0.0;

@@ -17,10 +17,10 @@ namespace Rocket {
         virtual Eigen::Vector4f GetPixelRGBA(int32_t x, int32_t y) final;
         virtual Eigen::Vector3f GetPixelRGB(int32_t x, int32_t y) final;
 
-    private:
-        std::vector<Eigen::Vector4f> image_data_ = {};
-        int32_t width_ = 0;
-        int32_t height_ = 0;
+    public:
+        std::vector<Eigen::Vector4f> image_data = {};
+        int32_t width = 0;
+        int32_t height = 0;
     };
 
     using SoftTexturePtr = std::shared_ptr<SoftTexture>;
